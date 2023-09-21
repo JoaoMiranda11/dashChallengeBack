@@ -1,9 +1,9 @@
-import { IsNumber, IsString } from "class-validator";
+import { IsBoolean, IsNumber, IsString } from "class-validator";
 import { Schema } from "mongoose";
 
 export class User {
   @IsNumber()
-  public id: string;
+  public _id: string;
 
   @IsString()
   public name: string;
@@ -15,7 +15,10 @@ export class User {
   public age: number;
 
   @IsString()
-  public avatar: string;
+  public password: string;
+
+  @IsBoolean()
+  public role: "admin" | "custom";
 }
 
 export const UserSchema = new Schema({
@@ -23,5 +26,6 @@ export const UserSchema = new Schema({
   name: String,
   email: String,
   age: String,
-  avatar: String,
+  password: String,
+  admin: String,
 });

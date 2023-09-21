@@ -19,5 +19,5 @@ export class CreateUser {
 
   @IsNumber()
   @IsNotEmpty()
-  public avatar: string;
+  public password: string;
 }

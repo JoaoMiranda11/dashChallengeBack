@@ -1,7 +1,6 @@
 export type AuthData = {
   email: string;
   name: string;
-  id: string;
+  _id: string;
   role: string;
-  thumbnail: string;
 };
